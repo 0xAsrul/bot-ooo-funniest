@@ -7,6 +7,7 @@ MAX_CHARS = 140
 assert isinstance(LINE, str)
 assert 1 <= len(LINE) <= MAX_CHARS, f"line is {len(LINE)} chars, must be 1-140"
 assert LINE == LINE.strip(), "line must not have leading/trailing whitespace"
+assert "  " not in LINE, "line must not contain double spaces"
 assert "\n" not in LINE and "\r" not in LINE, "line must be a single line"
 assert LINE.strip(), "line must not be blank"
 
